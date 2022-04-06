@@ -28,11 +28,11 @@ def signup(request):
         pass2 = request.POST['pass2']
 
         if User.objects.filter(username=username):
-            messages.error(request, "Username already exist! Please try with an other username.")
+            messages.error(request, "Username already exist! Please try some other username.")
             return redirect('home')
         
         if User.objects.filter(email=email).exists():
-            messages.error(request, "Email Already registered!!")
+            messages.error(request, "Email Already Registered!!")
             return redirect('home')
         
         if len(username)>20:
