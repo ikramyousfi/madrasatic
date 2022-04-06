@@ -36,7 +36,7 @@ def signup(request):
             return redirect('home')
         
         if len(username)>20:
-            messages.error(request, "Username must be under 20 charcters!!")
+            messages.error(request, "Username must be under 20 charcters!!!")
             return redirect('home')
         
         if pass1 != pass2:
